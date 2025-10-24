@@ -1,0 +1,500 @@
+/* ========================================
+   ANIMAÇÕES E TRANSIÇÕES
+   ======================================== */
+
+/* ========================================
+   ANIMAÇÃO DE ENTRADA DA PÁGINA
+   ======================================== */
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Aplicar animação ao navbar */
+.navbar {
+    animation: fadeInDown 0.6s ease-out;
+}
+
+/* Aplicar animação ao hero */
+.hero {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.hero-content {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* ========================================
+   ANIMAÇÃO DO HERO IMAGE (ZOOM SUTIL)
+   ======================================== */
+
+@keyframes heroZoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.hero-image {
+    animation: heroZoom 8s ease-in-out infinite alternate;
+}
+
+/* ========================================
+   ANIMAÇÃO DOS CARDS DE CONTEÚDO
+   ======================================== */
+
+@keyframes cardScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.content-card {
+    animation: cardScaleIn 0.5s ease-out;
+}
+
+/* Aplicar delay escalonado aos cards */
+.content-carousel .content-card:nth-child(1) { animation-delay: 0s; }
+.content-carousel .content-card:nth-child(2) { animation-delay: 0.1s; }
+.content-carousel .content-card:nth-child(3) { animation-delay: 0.2s; }
+.content-carousel .content-card:nth-child(4) { animation-delay: 0.3s; }
+.content-carousel .content-card:nth-child(5) { animation-delay: 0.4s; }
+.content-carousel .content-card:nth-child(6) { animation-delay: 0.5s; }
+
+/* ========================================
+   ANIMAÇÃO DE HOVER NOS CARDS
+   ======================================== */
+
+@keyframes cardHover {
+    to {
+        transform: scale(1.08);
+        box-shadow: 0 15px 40px rgba(108, 99, 255, 0.4);
+    }
+}
+
+.content-card:hover {
+    animation: cardHover 0.3s ease-out forwards;
+}
+
+/* ========================================
+   ANIMAÇÃO DO OVERLAY DO CARD
+   ======================================== */
+
+@keyframes overlayFadeIn {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+    to {
+        opacity: 1;
+        backdrop-filter: blur(2px);
+    }
+}
+
+.card-overlay {
+    animation: overlayFadeIn 0.3s ease-out forwards;
+}
+
+/* ========================================
+   ANIMAÇÃO DO BOTÃO PLAY
+   ======================================== */
+
+@keyframes btnPlayPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(108, 99, 255, 0);
+    }
+}
+
+.btn-play {
+    position: relative;
+}
+
+.btn-play:hover {
+    animation: btnPlayPulse 0.6s ease-out;
+}
+
+/* ========================================
+   ANIMAÇÃO DOS BOTÕES DO HERO
+   ======================================== */
+
+@keyframes btnSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-buttons .btn:nth-child(1) {
+    animation: btnSlideIn 0.6s ease-out 0.4s both;
+}
+
+.hero-buttons .btn:nth-child(2) {
+    animation: btnSlideIn 0.6s ease-out 0.5s both;
+}
+
+/* ========================================
+   ANIMAÇÃO DO TÍTULO DO HERO
+   ======================================== */
+
+@keyframes titleSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-title {
+    animation: titleSlideIn 0.7s ease-out 0.1s both;
+}
+
+.hero-description {
+    animation: titleSlideIn 0.7s ease-out 0.2s both;
+}
+
+/* ========================================
+   ANIMAÇÃO DOS TÍTULOS DAS SEÇÕES
+   ======================================== */
+
+@keyframes sectionTitleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.section-title {
+    animation: sectionTitleFadeIn 0.6s ease-out;
+}
+
+/* ========================================
+   ANIMAÇÃO DO LINK "VER TUDO"
+   ======================================== */
+
+@keyframes seeAllPulse {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+.see-all {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.see-all:hover {
+    animation: seeAllPulse 0.6s ease-in-out;
+}
+
+/* ========================================
+   ANIMAÇÃO DO NAVBAR LINKS
+   ======================================== */
+
+@keyframes navLinkFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-link {
+    animation: navLinkFadeIn 0.5s ease-out;
+}
+
+.nav-link:nth-child(1) { animation-delay: 0.1s; }
+.nav-link:nth-child(2) { animation-delay: 0.2s; }
+.nav-link:nth-child(3) { animation-delay: 0.3s; }
+.nav-link:nth-child(4) { animation-delay: 0.4s; }
+
+/* ========================================
+   ANIMAÇÃO DO BOTÃO DE PERFIL
+   ======================================== */
+
+@keyframes profileBtnBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.profile-btn {
+    animation: navLinkFadeIn 0.5s ease-out 0.5s both;
+}
+
+.profile-btn:hover {
+    animation: profileBtnBounce 0.6s ease-in-out;
+}
+
+/* ========================================
+   ANIMAÇÃO DO FOOTER
+   ======================================== */
+
+@keyframes footerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer {
+    animation: footerFadeIn 0.8s ease-out;
+}
+
+/* ========================================
+   EFEITOS DE HOVER SUPLEMENTARES
+   ======================================== */
+
+/* Efeito de brilho sutil nos cards */
+@keyframes cardGlow {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 25px rgba(108, 99, 255, 0.2);
+    }
+}
+
+.content-card:hover {
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.3);
+}
+
+/* ========================================
+   ANIMAÇÃO DE SCROLL SUAVE
+   ======================================== */
+
+@keyframes scrollReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   TRANSIÇÕES SUAVES GLOBAIS
+   ======================================== */
+
+a, button {
+    transition: all 0.3s ease;
+}
+
+/* ========================================
+   ANIMAÇÃO DO CARD IMAGE
+   ======================================== */
+
+@keyframes imageZoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.content-card:hover .card-image {
+    animation: imageZoom 0.5s ease-out forwards;
+}
+
+/* ========================================
+   ANIMAÇÃO DE PULSAÇÃO SUAVE
+   ======================================== */
+
+@keyframes softPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+/* ========================================
+   ANIMAÇÃO DO HERO BUTTONS
+   ======================================== */
+
+@keyframes btnGlowHover {
+    0% {
+        box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(108, 99, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+    }
+}
+
+.btn-primary:hover {
+    animation: btnGlowHover 0.6s ease-in-out;
+}
+
+/* ========================================
+   ANIMAÇÃO DE ENTRADA DO FOOTER
+   ======================================== */
+
+.footer-section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.footer-section:nth-child(1) { animation-delay: 0.1s; }
+.footer-section:nth-child(2) { animation-delay: 0.2s; }
+.footer-section:nth-child(3) { animation-delay: 0.3s; }
+.footer-section:nth-child(4) { animation-delay: 0.4s; }
+
+/* ========================================
+   ANIMAÇÃO DE HOVER DO FOOTER LINKS
+   ======================================== */
+
+.footer-section a {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-section a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.footer-section a:hover::after {
+    width: 100%;
+}
+
+/* ========================================
+   ANIMAÇÃO DE CARREGAMENTO (OPCIONAL)
+   ======================================== */
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* ========================================
+   ANIMAÇÃO DE SEÇÃO VISÍVEL
+   ======================================== */
+
+@keyframes sectionReveal {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-section {
+    animation: sectionReveal 0.8s ease-out;
+}
+
+.content-section:nth-child(2) { animation-delay: 0.1s; }
+.content-section:nth-child(3) { animation-delay: 0.2s; }
+.content-section:nth-child(4) { animation-delay: 0.3s; }
+
+/* ========================================
+   ANIMAÇÃO DE HOVER DO LOGO
+   ======================================== */
+
+@keyframes logoGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(108, 99, 255, 0.8);
+    }
+}
+
+.navbar-logo:hover h1 {
+    animation: logoGlow 0.6s ease-in-out;
+}
+
+/* ========================================
+   ANIMAÇÃO DE TRANSIÇÃO SUAVE PARA SEÇÕES
+   ======================================== */
+
+@keyframes contentFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: contentFadeIn 0.5s ease-out;
+}
+
