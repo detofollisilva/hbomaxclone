@@ -6,8 +6,8 @@ O projeto foi criado com foco em **design responsivo**, **interatividade visual*
 ---
 
 ## 🚀 Demonstração
+<img width="1887" height="960" alt="image" src="https://github.com/user-attachments/assets/79d0b626-c480-4c14-bfdd-6593381343f8" />
 
-🔗 **GitHub Pages:** [Insira aqui o link do seu projeto publicado]
 
 ---
 
