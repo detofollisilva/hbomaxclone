@@ -105,7 +105,7 @@ O site adapta-se automaticamente a diferentes resoluções:
 ## 🧑‍💻 Autor
 
 **Desenvolvido por:** Fabio Detofolli da Silva
-💼 [LinkedIn](https://www.linkedin.com) • 🖥 [GitHub](https://github.com/)
+💼 [LinkedIn]([https://www.linkedin.com](https://www.linkedin.com/in/fabio-detofolli-silva-31b52716b/)) • 🖥 [GitHub]([https://github.com/)](https://github.com/detofollisilva)
 
 ---
 
